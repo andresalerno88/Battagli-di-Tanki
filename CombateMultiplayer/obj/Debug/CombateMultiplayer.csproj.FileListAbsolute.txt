@@ -1,0 +1,63 @@
+c:\users\aluno\documents\visual studio 2013\Projects\CombateMultiplayer\CombateMultiplayer\bin\Debug\CombateMultiplayer.exe.config
+c:\users\aluno\documents\visual studio 2013\Projects\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.csprojResolveAssemblyReference.cache
+c:\users\aluno\documents\visual studio 2013\Projects\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.Form1.resources
+c:\users\aluno\documents\visual studio 2013\Projects\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.Properties.Resources.resources
+c:\users\aluno\documents\visual studio 2013\Projects\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.csproj.GenerateResource.Cache
+c:\users\aluno\documents\visual studio 2013\Projects\CombateMultiplayer\CombateMultiplayer\bin\Debug\CombateMultiplayer.exe
+c:\users\aluno\documents\visual studio 2013\Projects\CombateMultiplayer\CombateMultiplayer\bin\Debug\CombateMultiplayer.pdb
+c:\users\aluno\documents\visual studio 2013\Projects\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.exe
+c:\users\aluno\documents\visual studio 2013\Projects\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.pdb
+E:\CombateMultiplayer\CombateMultiplayer\bin\Debug\CombateMultiplayer.exe.config
+E:\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.exe
+E:\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.pdb
+E:\CombateMultiplayer\CombateMultiplayer\bin\Debug\CombateMultiplayer.exe
+E:\CombateMultiplayer\CombateMultiplayer\bin\Debug\CombateMultiplayer.pdb
+E:\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.csprojResolveAssemblyReference.cache
+E:\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.Properties.Resources.resources
+E:\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.csproj.GenerateResource.Cache
+C:\Users\Aluno\Downloads\CombateMultiplayer\CombateMultiplayer\bin\Debug\CombateMultiplayer.exe.config
+C:\Users\Aluno\Downloads\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.exe
+C:\Users\Aluno\Downloads\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.pdb
+C:\Users\Aluno\Downloads\CombateMultiplayer\CombateMultiplayer\bin\Debug\CombateMultiplayer.exe
+C:\Users\Aluno\Downloads\CombateMultiplayer\CombateMultiplayer\bin\Debug\CombateMultiplayer.pdb
+C:\Users\Aluno\Downloads\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.csprojResolveAssemblyReference.cache
+C:\Users\Aluno\Downloads\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.Properties.Resources.resources
+C:\Users\Aluno\Downloads\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.csproj.GenerateResource.Cache
+C:\Users\Aluno\Documents\CombateMultiplayer\CombateMultiplayer\bin\Debug\CombateMultiplayer.exe.config
+C:\Users\Aluno\Documents\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.exe
+C:\Users\Aluno\Documents\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.pdb
+C:\Users\Aluno\Documents\CombateMultiplayer\CombateMultiplayer\bin\Debug\CombateMultiplayer.exe
+C:\Users\Aluno\Documents\CombateMultiplayer\CombateMultiplayer\bin\Debug\CombateMultiplayer.pdb
+C:\Users\Aluno\Documents\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.csprojResolveAssemblyReference.cache
+C:\Users\Aluno\Documents\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.Properties.Resources.resources
+C:\Users\Aluno\Documents\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.csproj.GenerateResource.Cache
+C:\Users\Aluno\Documents\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaDeJogo.resources
+C:\Users\Aluno\Documents\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaInicial.resources
+C:\Users\Aluno\Downloads\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaDeJogo.resources
+C:\Users\Aluno\Downloads\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaInicial.resources
+C:\Users\Aluno\Downloads\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaSeleção.resources
+C:\Users\Aluno\Documents\CombateMultiplayer1\CombateMultiplayer\bin\Debug\CombateMultiplayer.exe.config
+C:\Users\Aluno\Documents\CombateMultiplayer1\CombateMultiplayer\obj\Debug\CombateMultiplayer.exe
+C:\Users\Aluno\Documents\CombateMultiplayer1\CombateMultiplayer\obj\Debug\CombateMultiplayer.pdb
+C:\Users\Aluno\Documents\CombateMultiplayer1\CombateMultiplayer\bin\Debug\CombateMultiplayer.exe
+C:\Users\Aluno\Documents\CombateMultiplayer1\CombateMultiplayer\bin\Debug\CombateMultiplayer.pdb
+C:\Users\Aluno\Documents\CombateMultiplayer1\CombateMultiplayer\obj\Debug\CombateMultiplayer.csprojResolveAssemblyReference.cache
+C:\Users\Aluno\Documents\CombateMultiplayer1\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaDeJogo.resources
+C:\Users\Aluno\Documents\CombateMultiplayer1\CombateMultiplayer\obj\Debug\CombateMultiplayer.Properties.Resources.resources
+C:\Users\Aluno\Documents\CombateMultiplayer1\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaInicial.resources
+C:\Users\Aluno\Documents\CombateMultiplayer1\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaSeleção.resources
+C:\Users\Aluno\Documents\CombateMultiplayer1\CombateMultiplayer\obj\Debug\CombateMultiplayer.csproj.GenerateResource.Cache
+E:\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaDeJogo.resources
+E:\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaInicial.resources
+E:\CombateMultiplayer\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaSeleção.resources
+C:\Users\Aluno\Documents\CombateMultiplayer\bin\Debug\CombateMultiplayer.exe.config
+C:\Users\Aluno\Documents\CombateMultiplayer\obj\Debug\CombateMultiplayer.exe
+C:\Users\Aluno\Documents\CombateMultiplayer\obj\Debug\CombateMultiplayer.pdb
+C:\Users\Aluno\Documents\CombateMultiplayer\obj\Debug\CombateMultiplayer.csprojResolveAssemblyReference.cache
+C:\Users\Aluno\Documents\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaDeJogo.resources
+C:\Users\Aluno\Documents\CombateMultiplayer\obj\Debug\CombateMultiplayer.Properties.Resources.resources
+C:\Users\Aluno\Documents\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaInicial.resources
+C:\Users\Aluno\Documents\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaSeleção.resources
+C:\Users\Aluno\Documents\CombateMultiplayer\obj\Debug\CombateMultiplayer.csproj.GenerateResource.Cache
+C:\Users\Aluno\Documents\CombateMultiplayer\bin\Debug\CombateMultiplayer.exe
+C:\Users\Aluno\Documents\CombateMultiplayer\bin\Debug\CombateMultiplayer.pdb
