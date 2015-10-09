@@ -13,20 +13,21 @@ using System.Windows.Forms;
 
 namespace CombateMultiplayer
 {
-    public partial class TelaInicial : Form
+    public struct Jogador
     {
-        public struct Jogador {
-            public string Codenome;
-            public string Nome;
-            public string IP;
-        
-        }
+        public string Codenome;
+        public string Nome;
+        public string IP;
 
-
+    }
+    public partial class TelaInicial : Form
+    {   
         public const int BufferSize = 1024;
 
         Thread ThreadEnviadoraDeCodenome;
         Thread ThreadEscutadora;
+        List<Jogador> Jogadores;
+
 
         private Socket socketUDP;
 
@@ -34,12 +35,22 @@ namespace CombateMultiplayer
 
         public TelaInicial()
         {
+            Jogadores = new List<Jogador>();
             InitializeComponent();
+
         }
 
-        void AdicionaJogador(String msg)
+        void AdicionaJogador(Jogador j)
         {
-            comboBox1.Items.Add(msg);
+            if (Jogadores.Contains(j))
+            {
+
+            }
+            else {
+                Jogadores.Add(j);
+                comboBox1.Items.Add(j.Nome + " # "+ j.Codenome);
+            }
+
         }
 
         private void TelaInicial_Load(object sender, EventArgs e)
@@ -51,13 +62,13 @@ namespace CombateMultiplayer
             socketUDP.Bind(localEndPoint);
 
             ThreadEscutadora = new Thread(Escuta);
-
+            ThreadEscutadora.Start();
         }
 
         void Escuta(Object o)
         {
             byte[] buffer = new byte[BufferSize];
-            EndPoint remoteEndPoint = new IPEndPoint(IPAddress.Any, 0); ;
+            EndPoint remoteEndPoint = new IPEndPoint(IPAddress.Any,0); ;
 
             // cria o objeto "state"
             StateObject state = new StateObject();
@@ -79,8 +90,6 @@ namespace CombateMultiplayer
         public void ServerReceiveFromCallback(IAsyncResult ar)
         {
 
-            AdicionaJogadorAListaDelegate addJogador = new AdicionaJogadorAListaDelegate(AdicionaJogador);
-
             // Recupera o objeto "state" e o socket de manipulacao
             StateObject state = (StateObject)ar.AsyncState;
             Socket handler = state.workSocket;
@@ -98,16 +107,60 @@ namespace CombateMultiplayer
                     string strContent = Encoding.ASCII.GetString(state.buffer, 0, bytesRead);
                     string ip = IPAddress.Parse(((IPEndPoint)clientEP).Address.ToString()).ToString();
 
-                    // mostra dados recebidos
-                    String dados = string.Format("[{0} - {1}] {2}",
-                                                 ip, ((IPEndPoint)clientEP).Port, strContent);
-                    myForm.BeginInvoke(showMsg, new object[] { dados });
+
+
+                    strContent += "|" + ip;
+                    ProcessData(strContent);
+
                 }
             }
             catch (Exception e)
             {
+                MessageBox.Show(e.ToString());
             }
+            Escuta(new object());
         }
+
+       
+
+
+        void ProcessData(string cadeia) {
+            int codigo, tamanho;
+            codigo = int.Parse(cadeia[0].ToString()+cadeia[1].ToString());
+            tamanho = int.Parse(cadeia[2].ToString()+cadeia[3].ToString()+cadeia[4].ToString());
+            char[] msg = new char[tamanho]; 
+            cadeia.CopyTo(5,msg,0,tamanho);
+
+            switch (codigo)
+            {
+                case 01:
+                    {
+                        mensagem01(new String(msg));
+
+                        break;
+                    }
+
+                default:
+                    break;
+            }
+        
+        
+        
+        
+        }
+
+        private void mensagem01(string cadeia){ 
+            
+            string[] strings = cadeia.Split(new Char[] { '|' });
+            Jogador j = new Jogador();
+            j.Codenome = strings[0];
+            j.Nome = strings[1];
+            j.IP = strings[2];
+
+
+            Invoke((MethodInvoker)delegate() { AdicionaJogador(j); });
+        }
+
 
         void EnviaCodenome(Object o)
         {

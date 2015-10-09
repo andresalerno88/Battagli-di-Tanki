@@ -40,7 +40,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(15, 259);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 20);
+            this.textBox1.Size = new System.Drawing.Size(147, 20);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Explosão_Cinza";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -59,9 +59,8 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(15, 327);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(127, 21);
+            this.comboBox1.Size = new System.Drawing.Size(147, 21);
             this.comboBox1.TabIndex = 2;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -76,7 +75,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(15, 354);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 23);
+            this.button1.Size = new System.Drawing.Size(147, 23);
             this.button1.TabIndex = 4;
             this.button1.Text = "Desafiar!";
             this.button1.UseVisualStyleBackColor = true;
