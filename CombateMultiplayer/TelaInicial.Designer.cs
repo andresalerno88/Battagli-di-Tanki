@@ -34,6 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -85,11 +87,27 @@
             // 
             this.button2.Location = new System.Drawing.Point(15, 285);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 23);
+            this.button2.Size = new System.Drawing.Size(147, 23);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Mudar Codenome";
+            this.button2.Text = "Pronto Para Jogar!";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 201);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Seu nome:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(15, 217);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(147, 20);
+            this.textBox2.TabIndex = 6;
             // 
             // TelaInicial
             // 
@@ -98,6 +116,8 @@
             this.BackgroundImage = global::CombateMultiplayer.Properties.Resources.favela_tank;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(524, 389);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
@@ -120,6 +140,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox2;
 
     }
 }

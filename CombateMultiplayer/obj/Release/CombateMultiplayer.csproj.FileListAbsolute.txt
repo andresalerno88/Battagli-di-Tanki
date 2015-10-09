@@ -1,0 +1,10 @@
+C:\Users\Aluno\Documents\Battagli-di-Tanki\CombateMultiplayer\bin\Release\CombateMultiplayer.exe.config
+C:\Users\Aluno\Documents\Battagli-di-Tanki\CombateMultiplayer\bin\Release\CombateMultiplayer.exe
+C:\Users\Aluno\Documents\Battagli-di-Tanki\CombateMultiplayer\bin\Release\CombateMultiplayer.pdb
+C:\Users\Aluno\Documents\Battagli-di-Tanki\CombateMultiplayer\obj\Release\CombateMultiplayer.TelaDeJogo.resources
+C:\Users\Aluno\Documents\Battagli-di-Tanki\CombateMultiplayer\obj\Release\CombateMultiplayer.Properties.Resources.resources
+C:\Users\Aluno\Documents\Battagli-di-Tanki\CombateMultiplayer\obj\Release\CombateMultiplayer.TelaInicial.resources
+C:\Users\Aluno\Documents\Battagli-di-Tanki\CombateMultiplayer\obj\Release\CombateMultiplayer.TelaSeleção.resources
+C:\Users\Aluno\Documents\Battagli-di-Tanki\CombateMultiplayer\obj\Release\CombateMultiplayer.csproj.GenerateResource.Cache
+C:\Users\Aluno\Documents\Battagli-di-Tanki\CombateMultiplayer\obj\Release\CombateMultiplayer.exe
+C:\Users\Aluno\Documents\Battagli-di-Tanki\CombateMultiplayer\obj\Release\CombateMultiplayer.pdb
