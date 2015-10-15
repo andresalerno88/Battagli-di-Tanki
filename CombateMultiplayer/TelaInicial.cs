@@ -21,7 +21,7 @@ namespace CombateMultiplayer
 
     }
     public partial class TelaInicial : Form
-    {   
+    {
         public const int BufferSize = 1024;
 
         Thread ThreadEnviadoraDeCodenome;
@@ -36,18 +36,19 @@ namespace CombateMultiplayer
         public TelaInicial()
         {
             Jogadores = new List<Jogador>();
-           
+
             InitializeComponent();
             CriaNome();
         }
 
-        void CriaNome() { 
-            string[] nomes = {"Ninja","Guerreiro","Fantasma","Mercenário","Gladiador","Unicórnio","Cozinheiro","Andróide","Exterminador","Cavaleiro"}; 
-            string[] adjetivos = {"Rubro","Cinzento","da Dor","Destruidor","Mortífero","do Arco-Íris","Polonês","Voador","Impiedoso","Paspalhão"};
+        void CriaNome()
+        {
+            string[] nomes = { "Ninja", "Guerreiro", "Fantasma", "Mercenário", "Gladiador", "Unicórnio", "Cozinheiro", "Andróide", "Exterminador", "Cavaleiro" };
+            string[] adjetivos = { "Rubro", "Cinzento", "da Dor", "Destruidor", "Mortífero", "do Arco-Íris", "Polonês", "Voador", "Impiedoso", "Paspalhão" };
             Random brandom = new Random();
             textBox1.Text = nomes[brandom.Next(10)] + " " + adjetivos[brandom.Next(10)];
-        
-        
+
+
         }
 
         void AdicionaJogador(Jogador j)
@@ -56,16 +57,17 @@ namespace CombateMultiplayer
             {
 
             }
-            else {
+            else
+            {
                 Jogadores.Add(j);
-                comboBox1.Items.Add(j.Codenome + " # "+ j.Nome);
+                comboBox1.Items.Add(j.Codenome + " # " + j.Nome);
             }
 
         }
 
         private void TelaInicial_Load(object sender, EventArgs e)
         {
-           // ThreadEnviadoraDeCodenome = new Thread(EnviaCodenome);
+            // ThreadEnviadoraDeCodenome = new Thread(EnviaCodenome);
             socketUDP = new Socket(AddressFamily.InterNetwork,
                                          SocketType.Dgram, ProtocolType.Udp);
             IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Any, 20152);
@@ -78,7 +80,7 @@ namespace CombateMultiplayer
         void Escuta(Object o)
         {
             byte[] buffer = new byte[BufferSize];
-            EndPoint remoteEndPoint = new IPEndPoint(IPAddress.Any,0); ;
+            EndPoint remoteEndPoint = new IPEndPoint(IPAddress.Any, 0); ;
 
             // cria o objeto "state"
             StateObject state = new StateObject();
@@ -118,7 +120,7 @@ namespace CombateMultiplayer
                     string ip = IPAddress.Parse(((IPEndPoint)clientEP).Address.ToString()).ToString();
 
 
-                    ProcessData(strContent,ip);
+                    ProcessData(strContent, ip);
 
                 }
             }
@@ -129,21 +131,22 @@ namespace CombateMultiplayer
             Escuta(new object());
         }
 
-       
 
 
-        void ProcessData(string cadeia,string ip) {
+
+        void ProcessData(string cadeia, string ip)
+        {
             int codigo, tamanho;
-            codigo = int.Parse(cadeia[0].ToString()+cadeia[1].ToString());
-            tamanho = int.Parse(cadeia[2].ToString()+cadeia[3].ToString()+cadeia[4].ToString());
-            char[] msg = new char[tamanho-5]; 
-            cadeia.CopyTo(5,msg,0,tamanho-5);
+            codigo = int.Parse(cadeia[0].ToString() + cadeia[1].ToString());
+            tamanho = int.Parse(cadeia[2].ToString() + cadeia[3].ToString() + cadeia[4].ToString());
+            char[] msg = new char[tamanho - 5];
+            cadeia.CopyTo(5, msg, 0, tamanho - 5);
 
             switch (codigo)
             {
                 case 01:
                     {
-                        mensagem01(new String(msg),ip);
+                        mensagem01(new String(msg), ip);
 
                         break;
                     }
@@ -151,26 +154,27 @@ namespace CombateMultiplayer
                 default:
                     break;
             }
-        
-        
-        
-        
+
+
+
+
         }
 
-        private void mensagem01(string cadeia,string ip){ 
-            
+        private void mensagem01(string cadeia, string ip)
+        {
+
             string[] strings = cadeia.Split(new Char[] { '|' });
             Jogador j = new Jogador();
             j.Codenome = strings[0];
             j.Nome = strings[1];
             j.IP = ip;
 
-
+            EnviaMsg02(ip);
             Invoke((MethodInvoker)delegate() { AdicionaJogador(j); });
         }
 
 
-     
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -186,66 +190,45 @@ namespace CombateMultiplayer
         {
             EnviaMsg01();
         }
-        
-        private void EnviaMsg01() {
+
+        private void EnviaMsg01()
+        {
             byte[] buffer = new byte[BufferSize];
-            EndPoint remoteEndPoint = new IPEndPoint(IPAddress.Broadcast,20152); 
+            EndPoint remoteEndPoint = new IPEndPoint(IPAddress.Broadcast, 20152);
 
             Socket UDPEnvia = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
 
-             UDPEnvia.EnableBroadcast = true;
+            UDPEnvia.EnableBroadcast = true;
             //UDPEnvia.SetSocketOption(SocketOptionLevel.Socket,SocketOptionName.Broadcast,1);
 
 
             string msg = textBox1.Text + "|" + textBox2.Text;
 
 
-            buffer = Encoding.ASCII.GetBytes("01"+string.Format("{0:000}",msg.Length+5)+msg);
-            UDPEnvia.SendTo(buffer,SocketFlags.None,remoteEndPoint);
-            /*
+            buffer = Encoding.ASCII.GetBytes("01" + string.Format("{0:000}", msg.Length + 5) + msg);
+            UDPEnvia.SendTo(buffer, SocketFlags.None, remoteEndPoint);
 
-            .BeginReceiveFrom(state.buffer,      // buffer
-                                 0,                      // Posição inicial no buffer
-                                 StateObject.BufferSize, // tamaho do buffer
-                                 SocketFlags.None,       // Comportamento send e receive
-                                 ref remoteEndPoint,
-                                 new AsyncCallback(ServerReceiveFromCallback),
-                                 state);
+        }
 
 
-            // Recupera o objeto "state" e o socket de manipulacao
-            StateObject state = (StateObject)ar.AsyncState;
-            Socket handler = state.workSocket;
+        private void EnviaMsg02(string ip)
+        {
+            byte[] mensage = new byte[BufferSize];
+            EndPoint remoteEndPoint = new IPEndPoint(IPAddress.Parse(ip), 20152);
 
-            try
-            {
-                // Lê dados do socket cliente. A operação assíncrona BeginReceiveFrom
-                // deve, obrigatoriamente, ser completada chamando o método EndReceiveFrom
-                EndPoint clientEP = new IPEndPoint(IPAddress.Any, 0);
-                int bytesRead = handler.EndReceiveFrom(ar, ref clientEP);
+            Socket UDPEnvia = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
 
-                if (bytesRead > 0)
-                {
-                    // Obtém os dados recebidos
-                    string strContent = Encoding.ASCII.GetString(state.buffer, 0, bytesRead);
-                    string ip = IPAddress.Parse(((IPEndPoint)clientEP).Address.ToString()).ToString();
+           // UDPEnvia.EnableBroadcast = true;
 
 
-
-                    strContent += "|" + ip;
-                    ProcessData(strContent);
-          
-                }  */
-            }
-         
-         
-            
+            string msg = textBox1.Text + "|" + textBox2.Text;
 
 
+            mensage = Encoding.ASCII.GetBytes("02" + string.Format("{0:000}", msg.Length + 5) + msg);
+            UDPEnvia.SendTo(mensage, SocketFlags.None, remoteEndPoint);
 
-
+        }
     }
-
 
         public class StateObject
         {
