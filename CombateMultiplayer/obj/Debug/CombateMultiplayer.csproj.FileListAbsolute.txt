@@ -84,3 +84,15 @@ C:\Users\Aluno\Documents\GitHub\Battagli-di-Tanki\CombateMultiplayer\obj\Debug\C
 C:\Users\Aluno\Documents\GitHub\Battagli-di-Tanki\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaSeleção.resources
 C:\Users\Aluno\Documents\GitHub\Battagli-di-Tanki\CombateMultiplayer\obj\Debug\CombateMultiplayer.csproj.GenerateResource.Cache
 C:\Users\Aluno\Documents\GitHub\Battagli-di-Tanki\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaConvite.resources
+C:\Users\PCAluno\Documents\Battagli-di-Tanki\CombateMultiplayer\bin\Debug\CombateMultiplayer.exe.config
+C:\Users\PCAluno\Documents\Battagli-di-Tanki\CombateMultiplayer\obj\Debug\CombateMultiplayer.exe
+C:\Users\PCAluno\Documents\Battagli-di-Tanki\CombateMultiplayer\obj\Debug\CombateMultiplayer.pdb
+C:\Users\PCAluno\Documents\Battagli-di-Tanki\CombateMultiplayer\bin\Debug\CombateMultiplayer.exe
+C:\Users\PCAluno\Documents\Battagli-di-Tanki\CombateMultiplayer\bin\Debug\CombateMultiplayer.pdb
+C:\Users\PCAluno\Documents\Battagli-di-Tanki\CombateMultiplayer\obj\Debug\CombateMultiplayer.csprojResolveAssemblyReference.cache
+C:\Users\PCAluno\Documents\Battagli-di-Tanki\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaConvite.resources
+C:\Users\PCAluno\Documents\Battagli-di-Tanki\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaDeJogo.resources
+C:\Users\PCAluno\Documents\Battagli-di-Tanki\CombateMultiplayer\obj\Debug\CombateMultiplayer.Properties.Resources.resources
+C:\Users\PCAluno\Documents\Battagli-di-Tanki\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaInicial.resources
+C:\Users\PCAluno\Documents\Battagli-di-Tanki\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaSeleção.resources
+C:\Users\PCAluno\Documents\Battagli-di-Tanki\CombateMultiplayer\obj\Debug\CombateMultiplayer.csproj.GenerateResource.Cache

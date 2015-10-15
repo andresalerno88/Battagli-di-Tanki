@@ -18,13 +18,12 @@ namespace CombateMultiplayer
         string name;
         string IP;
 
-        public TelaConvite(string str,TelaInicial t,string ip)
+        public TelaConvite(string str,string ip)
         {
             InitializeComponent();
-            telainicial = t;
             name = str;
             IP = ip;
-            label1.Text = String.Format("{0} mijou no seu quintal,\nte chamou de mariquinha\ne peidou na cara da sua avó.\nVai deixar barato?",name);
+           // label1.Text = String.Format("{0} mijou no seu quintal,\nte chamou de mariquinha\ne peidou na cara da sua avó.\nVai deixar barato?",name);
         }
 
         private void button1_Click(object sender, EventArgs e)

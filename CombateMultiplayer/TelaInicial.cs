@@ -65,6 +65,11 @@ namespace CombateMultiplayer
 
         }
 
+        void FechaJanela()
+        {
+            ThreadEscutadora.Abort();
+        }
+
         private void TelaInicial_Load(object sender, EventArgs e)
         {
             // ThreadEnviadoraDeCodenome = new Thread(EnviaCodenome);
@@ -195,8 +200,9 @@ namespace CombateMultiplayer
 
         private void RecebimentoMensagem03(string cadeia, string ip)
         {
-            Form f = new TelaConvite(cadeia,this,ip);
+            Form f = new TelaConvite(cadeia,ip);
             f.Show();
+            Invoke((MethodInvoker)delegate() { FechaJanela(); });
         }
 
         private void RecebimentoMensagem04(string cadeia, string ip)
