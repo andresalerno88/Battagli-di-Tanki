@@ -83,3 +83,4 @@ C:\Users\Aluno\Documents\GitHub\Battagli-di-Tanki\CombateMultiplayer\obj\Debug\C
 C:\Users\Aluno\Documents\GitHub\Battagli-di-Tanki\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaInicial.resources
 C:\Users\Aluno\Documents\GitHub\Battagli-di-Tanki\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaSeleção.resources
 C:\Users\Aluno\Documents\GitHub\Battagli-di-Tanki\CombateMultiplayer\obj\Debug\CombateMultiplayer.csproj.GenerateResource.Cache
+C:\Users\Aluno\Documents\GitHub\Battagli-di-Tanki\CombateMultiplayer\obj\Debug\CombateMultiplayer.TelaConvite.resources

@@ -146,8 +146,17 @@ namespace CombateMultiplayer
             {
                 case 01:
                     {
-                        mensagem01(new String(msg), ip);
+                        RecebimentoMensagem01(new String(msg), ip);
 
+                        break;
+                    }
+                case 02: {
+                        RecebimentoMensagem02(new String(msg), ip);
+                    break;
+                }
+                case 03:
+                    {
+                        RecebimentoMensagem03(new String(msg), ip);
                         break;
                     }
 
@@ -160,7 +169,7 @@ namespace CombateMultiplayer
 
         }
 
-        private void mensagem01(string cadeia, string ip)
+        private void RecebimentoMensagem01(string cadeia, string ip)
         {
 
             string[] strings = cadeia.Split(new Char[] { '|' });
@@ -173,12 +182,27 @@ namespace CombateMultiplayer
             Invoke((MethodInvoker)delegate() { AdicionaJogador(j); });
         }
 
+        private void RecebimentoMensagem02(string cadeia, string ip)
+        {
+            string[] strings = cadeia.Split(new Char[] { '|' });
+            Jogador j = new Jogador();
+            j.Codenome = strings[0];
+            j.Nome = strings[1];
+            j.IP = ip;
 
+            Invoke((MethodInvoker)delegate() { AdicionaJogador(j); });
+        }
+
+        private void RecebimentoMensagem03(string cadeia, string ip)
+        {
+            Form f = new TelaConvite(cadeia);
+            f.Show();
+        }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            EnviaMsg03(Jogadores[comboBox1.SelectedIndex].IP);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -225,6 +249,22 @@ namespace CombateMultiplayer
 
 
             mensage = Encoding.ASCII.GetBytes("02" + string.Format("{0:000}", msg.Length + 5) + msg);
+            UDPEnvia.SendTo(mensage, SocketFlags.None, remoteEndPoint);
+
+        }
+
+
+        private void EnviaMsg03(string ip)
+        {
+            byte[] mensage = new byte[BufferSize];
+            EndPoint remoteEndPoint = new IPEndPoint(IPAddress.Parse(ip), 20152);
+
+            Socket UDPEnvia = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+
+            string msg = textBox1.Text;
+
+
+            mensage = Encoding.ASCII.GetBytes("03" + string.Format("{0:000}", msg.Length + 5) + msg);
             UDPEnvia.SendTo(mensage, SocketFlags.None, remoteEndPoint);
 
         }

@@ -46,6 +46,12 @@
   <ItemGroup>
     <Compile Include="ClienteRede.cs" />
     <Compile Include="Obstaculo.cs" />
+    <Compile Include="TelaConvite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaConvite.Designer.cs">
+      <DependentUpon>TelaConvite.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaDeJogo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
       <DependentUpon>TelaSeleção.cs</DependentUpon>
     </Compile>
     <Compile Include="Tirinho.cs" />
+    <EmbeddedResource Include="TelaConvite.resx">
+      <DependentUpon>TelaConvite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaDeJogo.resx">
       <DependentUpon>TelaDeJogo.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +125,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\favela-tank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10665397_706567619398121_1610900135_n.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
