@@ -11,7 +11,7 @@ namespace CombateMultiplayer
         private string TeclaPressionada;
         private const int BUFFER_SIZE = 1024;
         Tanque Tanque =null;
-        int port = 1138;
+        int Port = 1138;
 
         TcpListener listener = null;
 
@@ -20,12 +20,13 @@ namespace CombateMultiplayer
 
         bool rodando = true;
 
-        public ServidorRede(Tanque tanque)
-        {            
+        public ServidorRede(Tanque tanque,int port)
+        {
+            Port = port;
 
             try
             {
-                listener = new TcpListener(IPAddress.Any, port);
+                listener = new TcpListener(IPAddress.Any, Port);
                 listener.Start();
             }
             catch (SocketException e)

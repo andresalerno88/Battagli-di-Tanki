@@ -20,8 +20,9 @@ namespace CombateMultiplayer
         TcpClient client;
 
 
-        public ClienteRede(Tanque t, string ip)
+        public ClienteRede(Tanque t, string ip, int port)
         {
+            Porto = port;
             Tanque = t;
             Ip = ip;
             client = new TcpClient(Ip, Porto);

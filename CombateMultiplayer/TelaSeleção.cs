@@ -19,13 +19,13 @@ namespace CombateMultiplayer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form f = new TelaDeJogo(1, textBox1.Text);
+            Form f = new TelaDeJogo(1, textBox1.Text,1138);
             f.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form f = new TelaDeJogo(2, textBox1.Text);
+            Form f = new TelaDeJogo(2, textBox1.Text,1138);
             f.Show();
             //  f.Activate();
             // f.Close();

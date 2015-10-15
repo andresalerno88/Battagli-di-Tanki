@@ -195,7 +195,13 @@ namespace CombateMultiplayer
 
         private void RecebimentoMensagem03(string cadeia, string ip)
         {
-            Form f = new TelaConvite(cadeia);
+            Form f = new TelaConvite(cadeia,this,ip);
+            f.Show();
+        }
+
+        private void RecebimentoMensagem04(string cadeia, string ip)
+        {
+            Form f = new TelaDeJogo(2, ip, 1138);
             f.Show();
         }
 

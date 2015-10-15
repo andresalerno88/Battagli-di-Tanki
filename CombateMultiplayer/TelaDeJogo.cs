@@ -29,13 +29,15 @@ namespace CombateMultiplayer
         String IP;
         public List<ProtoSprite> Sprites;
 
+        int Porto;
+
 
         const int DimensaoDaTelaX = 800, DimensaoDaTelaY = 600;
 
-        public TelaDeJogo(int numeroDoTanque, string ip)
+        public TelaDeJogo(int numeroDoTanque, string ip, int porto)
         {
             InitializeComponent();
-
+            Porto = porto;
             areaDeDesenho = new Bitmap(DimensaoDaTelaX, DimensaoDaTelaY); //Cria a área de desenho;
             pictureBox1.Image = areaDeDesenho; //Manda a região delimitada no Design do Visual mostrar nossa área de desenho;
             desenhista = Graphics.FromImage(areaDeDesenho); //Diz onde o desenhista desenha.        
@@ -83,11 +85,11 @@ namespace CombateMultiplayer
             switch (tanqueLocal)
             {
                 case 1:
-                    server = new ServidorRede(Tanque2);
+                    server = new ServidorRede(Tanque2,Porto);
                     server.inicia();
                     break;
                 case 2:
-                    client = new ClienteRede(Tanque1, IP);
+                    client = new ClienteRede(Tanque1, IP,Porto);
                     client.roda();
                     break;
             }
