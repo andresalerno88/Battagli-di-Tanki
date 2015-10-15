@@ -189,19 +189,19 @@ namespace CombateMultiplayer
         
         private void EnviaMsg01() {
             byte[] buffer = new byte[BufferSize];
-            EndPoint remoteEndPoint = new IPEndPoint(IPAddress.Broadcast, 20152); ;
+            EndPoint remoteEndPoint = new IPEndPoint(IPAddress.Broadcast,20152); 
 
             Socket UDPEnvia = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
 
-            UDPEnvia.EnableBroadcast = true;
+             UDPEnvia.EnableBroadcast = true;
+            //UDPEnvia.SetSocketOption(SocketOptionLevel.Socket,SocketOptionName.Broadcast,1);
 
-           // socketUDP.Bind(remoteEndPoint);
 
             string msg = textBox1.Text + "|" + textBox2.Text;
 
 
             buffer = Encoding.ASCII.GetBytes("01"+string.Format("{0:000}",msg.Length+5)+msg);
-            UDPEnvia.SendTo(buffer,SocketFlags.Broadcast,remoteEndPoint);
+            UDPEnvia.SendTo(buffer,SocketFlags.None,remoteEndPoint);
             /*
 
             .BeginReceiveFrom(state.buffer,      // buffer

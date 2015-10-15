@@ -108,6 +108,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(147, 20);
             this.textBox2.TabIndex = 6;
+            this.textBox2.Text = "Willford";
             // 
             // TelaInicial
             // 
@@ -125,7 +126,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "TelaInicial";
-            this.Text = "Form2";
+            this.Text = "Bem-Vindo à Batalha de Tanques";
             this.Load += new System.EventHandler(this.TelaInicial_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
